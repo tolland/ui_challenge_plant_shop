@@ -29,6 +29,6 @@ The plant images were generated using dall-e
 
 - <https://labs.openai.com>
  
-Profile icon used on results page is from pngall.com
+Profile icon used on results page is from pngall.com (Creative Commons 4.0 BY-NC)
 
 - <https://www.pngall.com/profile-png/download/51600>

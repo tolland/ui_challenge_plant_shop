@@ -28,103 +28,113 @@ class _ResultsPageState extends State<ResultsPage> {
   Widget build(BuildContext context) {
     return BlocBuilder<PlantsBloc, PlantsState>(builder: (context, state) {
       List<Plant> plantList = state.allPlants;
-      return Scaffold(
-        backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          title: Text("Search Products"),
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.keyboard_arrow_left),
+      return Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: const [
+              Color(0xffececee),
+              Color(0xffd8d8da),
+            ],
           ),
-          centerTitle: true,
-          actions: [
-            IconButton(
-              icon: Image.asset(
-                'assets/images/Profile-Male-PNG.png',
-                fit: BoxFit.contain,
-                height: 32,
-              ),
-              onPressed: () {},
-            ),
-          ],
         ),
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-                  child: SizedBox(
-                    height: 50,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            controller: _controller,
-                            decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              hintText: "Plants",
-                              prefixIcon: Icon(Icons.search),
-                              border: OutlineInputBorder(
+        child: Scaffold(
+          backgroundColor: Color(0xffececee),
+          appBar: AppBar(
+            title: Text("Search Products"),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.keyboard_arrow_left),
+            ),
+            centerTitle: true,
+            actions: [
+              IconButton(
+                icon: Image.asset(
+                  'assets/images/Profile-Male-PNG.png',
+                  fit: BoxFit.contain,
+                  height: 32,
+                ),
+                onPressed: () {},
+              ),
+            ],
+          ),
+          body: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                    child: SizedBox(
+                      height: 50,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              controller: _controller,
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: "Plants",
+                                prefixIcon: Icon(Icons.search),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Ink(
+                            width: 40,
+                            decoration: ShapeDecoration(
+                              color: Colors.white,
+                              shape: OutlineInputBorder(
                                 borderSide: BorderSide.none,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Ink(
-                          width: 40,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.circular(10),
+                            child: IconButton(
+                              icon: const Icon(Icons.checklist),
+                              color: Colors.black,
+                              onPressed: () {},
                             ),
-                          ),
-                          child: IconButton(
-                            icon: const Icon(Icons.checklist),
-                            color: Colors.black,
-                            onPressed: () {},
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: MasonryGridView.count(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 10,
-                    itemCount: plantList.length + 1,
-                    itemBuilder: (context, index) {
-                      if (index == 0) {
-                        return ResultsListHeader(
-                          count: plantList.length,
-                        );
-                      } else {
-                        var plant = plantList[index - 1];
-                        return ProductCard(
-                          index: index - 1,
-                          width: 100,
-                          plant: plant,
-                        );
-                      }
-                    },
+                  Expanded(
+                    child: MasonryGridView.count(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                      itemCount: plantList.length + 1,
+                      itemBuilder: (context, index) {
+                        if (index == 0) {
+                          return ResultsListHeader(
+                            count: plantList.length,
+                          );
+                        } else {
+                          var plant = plantList[index - 1];
+                          return ProductCard(
+                            index: index - 1,
+                            width: 100,
+                            plant: plant,
+                          );
+                        }
+                      },
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       );
     });
   }

@@ -17,15 +17,9 @@ class DetailInfoBox extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
-          Radius.circular(35),
+          Radius.circular(30),
         ),
         color: Color(0xFF76984b),
-        // boxShadow: const [
-        //   BoxShadow(
-        //     color: Colors.green,
-        //     spreadRadius: 3,
-        //   ),
-        // ],
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -83,7 +77,7 @@ class DetailInfoBox extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFF67864a),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                       textStyle:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       shape: RoundedRectangleBorder(

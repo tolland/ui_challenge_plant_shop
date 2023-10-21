@@ -9,9 +9,8 @@ enum AppTheme {
 class AppThemes {
   static ThemeData light() {
     return ThemeData(
-      
       primarySwatch: Colors.pink,
-      primaryColor: Colors.yellow,
+      primaryColor: Colors.white,
       brightness: Brightness.light,
       dividerColor: const Color(0xff757575),
       colorScheme: const ColorScheme(
@@ -44,6 +43,9 @@ class AppThemes {
           fontWeight: FontWeight.w500,
           color: Colors.black,
           backgroundColor: Colors.transparent,
+        ),
+        displaySmall: TextStyle(
+          color: Colors.black,
         ),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(

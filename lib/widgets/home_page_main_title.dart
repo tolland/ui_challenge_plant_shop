@@ -11,8 +11,8 @@ class HomePageMainTitle extends StatelessWidget {
         child: RichText(
           textAlign: TextAlign.left,
           text: TextSpan(
-            text: 'Enjoy your\n',
             style: Theme.of(context).textTheme.displaySmall,
+            text: 'Enjoy your\n',
             children: const <TextSpan>[
               TextSpan(text: 'Life with '),
               TextSpan(

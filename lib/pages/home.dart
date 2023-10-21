@@ -15,33 +15,42 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, ResultsPage.id);
-            },
-            child: Text("Skip"),
-          )
-        ],
-      ),
-      body: SafeArea( 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: const <Widget>[
-            HomePageCarousel(),
-            HomePageMainTitle(),
-            HomePageButton(),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: const [
+            Color(0xffececee),
+            Color(0xffd8d8da),
           ],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, ResultsPage.id);
+              },
+              child: Text("Skip"),
+            )
+          ],
+        ),
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: const <Widget>[
+              HomePageCarousel(),
+              HomePageMainTitle(),
+              HomePageButton(),
+            ],
+          ),
         ),
       ),
     );
   }
 }
-

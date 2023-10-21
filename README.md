@@ -1,10 +1,10 @@
-# ui_challenge_plant_shop
+# Flutter ui challenge (plant shop app)
 
-This is a Flutter UI Challenge for a Plant Shop App.
+This is an entry into the heyflutter UI Challenge for a Plant Shop App.
 
-Background is in this video
+Background on the challenge is in this video:
 
-<https://www.youtube.com/watch?v=aERczKh_uMk>
+- <https://www.youtube.com/watch?v=aERczKh_uMk>
 
 The reference artwork is here:
 
@@ -14,10 +14,12 @@ https://dribbble.com/shots/16340862-Plants-Shop-App-UI
 
 ## Information
 
-This project uses the following packages:
-- stagged_grid_view: ^0.3.0
+This project uses a number of third party packages, including:
+
+- flutter_staggered_grid_view
 - flutter_bloc
-- carousel
+- flutter_carousel_widget
+- auto_size_text
 
 data is provided by a json file in the "assets" folder.
 

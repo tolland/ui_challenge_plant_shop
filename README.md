@@ -32,3 +32,15 @@ The plant images were generated using dall-e
 Profile icon used on results page is from pngall.com (Creative Commons 4.0 BY-NC)
 
 - <https://www.pngall.com/profile-png/download/51600>
+
+The launcher icon came from here:
+https://www.iconpacks.net/free-icon/plant-1573.html
+
+## Screenshots
+
+![Screenshot_20231021-183544.jpg](screenshots%2FScreenshot_20231021-183544.jpg)
+
+![Screenshot_20231021-183529.jpg](screenshots%2FScreenshot_20231021-183529.jpg)
+
+![Screenshot_20231021-183440.jpg](screenshots%2FScreenshot_20231021-183440.jpg)
+

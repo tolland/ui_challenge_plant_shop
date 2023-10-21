@@ -9,6 +9,7 @@ enum AppTheme {
 class AppThemes {
   static ThemeData light() {
     return ThemeData(
+      
       primarySwatch: Colors.pink,
       primaryColor: Colors.yellow,
       brightness: Brightness.light,
@@ -49,13 +50,13 @@ class AppThemes {
           backgroundColor: Colors.grey,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.white),
-      appBarTheme: const AppBarTheme(
+      appBarTheme: AppBarTheme(
         elevation: 0,
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.black),
         titleTextStyle: TextStyle(
-          color: Colors.green,
-          fontWeight: FontWeight.bold,
+          color: Colors.grey.shade700,
+          fontWeight: FontWeight.normal,
           fontSize: 20,
         ),
       ),

@@ -10,7 +10,7 @@ class ResultsListHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+        padding: const EdgeInsets.fromLTRB(10, 20, 0, 20),
         child: Card(
           color: Colors.transparent,
           elevation: 0,

@@ -31,21 +31,23 @@ class _ResultsPageState extends State<ResultsPage> {
       return Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          // title: Text("some title"),
+          title: Text("Search Products"),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.keyboard_arrow_left),
+          ),
+          centerTitle: true,
           actions: [
-            Text(
-              "Search Products",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
             IconButton(
+              icon: Image.asset(
+                'assets/images/Profile-Male-PNG.png',
+                fit: BoxFit.contain,
+                height: 32,
+              ),
               onPressed: () {},
-              icon: Icon(Icons.person),
-            )
+            ),
           ],
         ),
         body: SafeArea(
@@ -65,7 +67,7 @@ class _ResultsPageState extends State<ResultsPage> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              hintText: "Search Products",
+                              hintText: "Plants",
                               prefixIcon: Icon(Icons.search),
                               border: OutlineInputBorder(
                                 borderSide: BorderSide.none,
@@ -74,16 +76,16 @@ class _ResultsPageState extends State<ResultsPage> {
                             ),
                           ),
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Ink(
                           width: 40,
-                          decoration: const ShapeDecoration(
+                          decoration: ShapeDecoration(
                             color: Colors.white,
-                            shape: CircleBorder(
-                              side: BorderSide(
-                                color: Colors.grey,
-                                width: 1,
-                                style: BorderStyle.solid,
-                              ),
+                            shape: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                           child: IconButton(

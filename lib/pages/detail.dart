@@ -27,6 +27,12 @@ class DetailPage extends StatelessWidget {
       return Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.keyboard_arrow_left),
+          ),
           actions: [
             // IconButton(
             //   onPressed: () {},

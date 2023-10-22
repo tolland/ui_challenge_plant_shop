@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Lucky Jade Plant",
+    "description": "Plants make your life with minimal and happy hjappy love and enjoy life.",
+    "price": 1237,
+    "imageUrl": "assets/images/plant_1.png",
+    "subtitle": "Super Greens"
+  },
+  {
+    "name": "Eco Serenity Indoor Plant",
+    "description": "Embrace the calming presence of nature with our \"Eco Serenity\" indoor plant, a perfect addition to your home or office.",
+    "price": 3999,
+    "imageUrl": "assets/images/plant_2.png",
+    "subtitle": "Stress Reduction"
+  },
+  {
+    "name": "Peace Lily Plant",
+    "description": "This beautiful, low-maintenance houseplant is renowned for its lush green foliage and air-purifying qualities, creating a peaceful and clean environment wherever it's placed.",
+    "price": 795,
+    "imageUrl": "assets/images/plant_3.png",
+    "subtitle": "Decorative Pot"
+  },
+  {
+    "name": "GreenAura Majesty Palm",
+    "description": "The neutral tones of the pot complement any decor, making it a perfect gift for loved ones on any occasion.",
+    "price": 1500,
+    "imageUrl": "assets/images/plant_4.png",
+    "subtitle": "Air Purification"
+  },
+  {
+    "name": "PureAir Succulent Plant",
+    "description": "Bringing a piece of nature into your personal space .",
+    "price": 12221,
+    "imageUrl": "assets/images/plant_5.png",
+    "subtitle": "Super Greens"
+  }
+]

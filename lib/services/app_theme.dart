@@ -62,6 +62,9 @@ class AppThemes {
           fontSize: 20,
         ),
       ),
+      snackBarTheme: SnackBarThemeData(
+        contentTextStyle: TextStyle(color: Colors.black),
+      ),
     );
   }
 }

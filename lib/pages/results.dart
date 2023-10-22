@@ -100,7 +100,7 @@ class _ResultsPageState extends State<ResultsPage> {
                                   ),
                                 ),
                                 child: IconButton(
-                                  icon: const Icon(Icons.checklist),
+                                  icon: const Icon(Icons.tune),
                                   color: Colors.black,
                                   onPressed: () {},
                                 ),

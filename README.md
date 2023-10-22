@@ -21,7 +21,13 @@ This project uses a number of third party packages, including:
 - flutter_carousel_widget
 - auto_size_text
 
-data is provided by a json file in the "assets" folder.
+data is provided by a json file "assets/data/plants.json" which is loaded into a bloc.
+
+### Issues
+
+- only tested on android
+- tested on samsung galaxy s9+ and pixel 5 emulators
+- text overflows in landscape mode detail screen
 
 ## Attribution
 

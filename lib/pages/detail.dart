@@ -4,9 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/plants_bloc/plants_bloc.dart';
 import 'package:plants_repository/plants_repository.dart';
 
-import '../widgets/detail_carousel.dart';
-import '../widgets/detail_infobox.dart';
-import '../widgets/detail_product_text.dart';
+import 'detail_landscape.dart';
+import 'detail_portrait.dart';
 
 class DetailsPageArguments {
   final int index;
@@ -43,29 +42,12 @@ class DetailPage extends StatelessWidget {
             )
           ],
         ),
-        body: SafeArea(
-          child: Column(
-            children: [
-              Expanded(
-                flex: 8,
-                child: DetailCarousel(
-                  plant: plant,
-                ),
-              ),
-              Expanded(
-                flex: 4,
-                child: DetailProductText(
-                  plant: plant,
-                ),
-              ),
-              Expanded(
-                flex: 5,
-                child: DetailInfoBox(
-                  plant: plant,
-                ),
-              ),
-            ],
-          ),
+        body: OrientationBuilder(
+          builder: (context, orientation) {
+            return SafeArea(
+              child: orientation == Orientation.portrait ? DetailPagePortrait(plant: plant) : DetailPageLandscape(plant: plant),
+            );
+          }
         ),
       );
     });

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plants_repository/src/models/plant.dart';
+import 'package:plants_repository/plants_repository.dart';
 
 import '../widgets/detail_carousel.dart';
 import '../widgets/detail_infobox.dart';
@@ -12,7 +12,7 @@ class DetailPagePortrait extends StatelessWidget {
   });
 
   final Plant plant;
-  
+
   @override
   Widget build(BuildContext context) {
     return Column(

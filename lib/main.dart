@@ -22,17 +22,15 @@ void main() async {
       (defaultTargetPlatform == TargetPlatform.iOS ||
           defaultTargetPlatform == TargetPlatform.android);
 
-  print(kIsWeb);
-  print(defaultTargetPlatform);
-
   runApp(
     DevicePreview(
       storage: DevicePreviewStorage.none(),
-      // data: DevicePreviewData(
-      //   deviceIdentifier: Devices.ios.iPhone12.toString(),
-      //   isFrameVisible: false,
-      //   locale: 'en_GB',
-      // ),
+      defaultDevice: Devices.android.samsungGalaxyS20,
+      data: DevicePreviewData(
+        deviceIdentifier: Devices.android.samsungGalaxyS20.toString(),
+        // isFrameVisible: false,
+        // locale: 'en_GB',
+      ),
       availableLocales: const [
         Locale('en_US'),
         Locale('en_GB'),

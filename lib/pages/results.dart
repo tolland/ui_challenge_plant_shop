@@ -19,20 +19,13 @@ class ResultsPage extends StatefulWidget {
 }
 
 class _ResultsPageState extends State<ResultsPage> {
-  final rnd = Random();
-  int crossAxisCount = 4;
-
   final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
 
-    print(MediaQuery.of(context).orientation);
-
     return BlocBuilder<PlantsBloc, PlantsState>(builder: (context, state) {
-      print(MediaQuery.of(context).orientation);
-
       List<Plant> plantList = state.allPlants;
       return Container(
         decoration: BoxDecoration(

@@ -25,9 +25,17 @@ dependencies:
   auto_size_text: ^3.0.0
   peanut: ^5.0.0
   flutter_native_splash: ^2.3.4
-  device_preview: ^1.1.0
-  device_frame: ^1.1.0
-    
+#  device_preview: ^1.1.0
+#
+#dependency_overrides:
+  device_preview:
+    git:
+      url: https://github.com/bradrushworth/flutter_device_preview.git
+      path: device_preview
+      ref: master
+#  device_preview: ^1.1.0
+  # device_frame: ^1.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

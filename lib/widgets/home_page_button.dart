@@ -10,25 +10,27 @@ class HomePageButton extends StatelessWidget {
     return Expanded(
       flex: 2,
       // create a button that navigates to the results page
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.pushNamed(context, ResultsPage.id);
-        },
-        style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white,
-          backgroundColor: Color(0xff76984b),
-          shape: CircleBorder(
-            ///eccentricity: 1.0,
-            side: BorderSide(
-              color: Colors.transparent,
-              width: 40,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Ink(
+            height: 90,
+            width: 90,
+            decoration: const ShapeDecoration(
+              color: Color(0xff76984b),
+              shape: CircleBorder(),
             ),
-          )
-        ),
-        child: Icon(Icons.arrow_right_alt_outlined,
-          size: 50,
-        
-        ),
+            child: IconButton(
+              //icon: Icon(Icons.east_sharp),
+              icon: Icon(Icons.arrow_right_alt_outlined),
+              iconSize: 60,
+              color: Colors.white,
+              onPressed: () {
+                Navigator.pushNamed(context, ResultsPage.id);
+              },
+            ),
+          ),
+        ],
       ),
       // child: Icon(Icons.arrow_right_alt_outlined),
     );

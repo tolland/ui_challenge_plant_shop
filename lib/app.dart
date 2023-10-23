@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:plants_repository/plants_repository.dart';
 import 'package:ui_challenge_plant_shop/services/app_router.dart';
@@ -15,7 +16,7 @@ class PlantApp extends StatelessWidget {
 
   final AppRouter appRouter;
   final PlantRepository plantRepository;
-  
+
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider.value(
@@ -32,6 +33,8 @@ class PlantApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           title: 'Flutter Plant Shop App UI Demo',
           theme: AppThemes.light(),

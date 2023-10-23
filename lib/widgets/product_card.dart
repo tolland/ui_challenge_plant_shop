@@ -79,6 +79,9 @@ class _ProductCardState extends State<ProductCard> {
                 );
               },
             ),
+            const SizedBox(
+              height: 4.0,
+            ),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -90,34 +93,37 @@ class _ProductCardState extends State<ProductCard> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 4.0,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   NumberFormat.simpleCurrency(locale: 'en_US')
                       .format(widget.plant.price / 100),
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
-                Center(
-                  child: Ink(
-                    width: 40,
-                    decoration: const ShapeDecoration(
-                      color: Colors.black,
-                      shape: CircleBorder(),
+                Ink(
+                  height: 30,
+                  decoration: const ShapeDecoration(
+                    color: Colors.black,
+                    shape: CircleBorder(),
+                  ),
+                  child: IconButton(
+                    icon: Icon(
+                      _isFavorite ? Icons.favorite : Icons.favorite_border,
                     ),
-                    child: IconButton(
-                      icon: Icon(
-                          _isFavorite ? Icons.favorite : Icons.favorite_border),
-                      color: Colors.white,
-                      onPressed: () {
-                        setState(() {
-                          _isFavorite = !_isFavorite;
-                        });
-                      },
-                    ),
+                    iconSize: 14,
+                    color: Colors.white,
+                    onPressed: () {
+                      setState(() {
+                        _isFavorite = !_isFavorite;
+                      });
+                    },
                   ),
                 ),
               ],

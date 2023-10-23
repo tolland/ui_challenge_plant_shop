@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: MediaQuery.of(context).orientation == Orientation.landscape
-            ? null // show nothing in lanscape mode
+            ? null // show nothing in landscape mode
             : AppBar(
                 actions: [
                   TextButton(
@@ -38,17 +38,33 @@ class HomePage extends StatelessWidget {
                 ],
               ),
         body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            // mainAxisSize: MainAxisSize.min,
-            children: const <Widget>[
-              HomePageCarousel(),
-              HomePageMainTitle(),
-              HomePageButton(),
-            ],
-          ),
-        ),
+            child: orientation == Orientation.portrait
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    // mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      HomePageCarousel(),
+                      HomePageMainTitle(),
+                      HomePageButton(),
+                    ],
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    // mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Expanded(
+                        child: HomePageCarousel(),
+                      ),
+                      Column(
+                        children: [
+                          HomePageMainTitle(),
+                          HomePageButton(),
+                        ],
+                      ),
+                    ],
+                  )),
       ),
     );
   }

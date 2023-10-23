@@ -33,5 +33,76 @@
     "price": 12221,
     "imageUrl": "assets/images/plant_5.png",
     "subtitle": "Super Greens"
+  },
+  {
+    "name": "Green Harmony Leafy Delight",
+    "description": "Experience tranquility and balance with the 'Green Harmony' leafy plant, making any interior space feel peaceful.",
+    "price": 2999,
+    "imageUrl": "assets/images/plant_1.png",
+    "subtitle": "Promotes Peacefulness"
+  },
+  {
+    "name": "Pure Oxygen Bloom",
+    "description": "Breathe life into your surroundings with our 'Pure Oxygen Bloom' plant, ideal for purifying the air and uplifting your spirits.",
+    "price": 2599,
+    "imageUrl": "assets/images/plant_2.png",
+    "subtitle": "Air Purifying"
+  },
+  {
+    "name": "Tropical Tranquility Palm",
+    "description": "Bring a touch of the tropics indoors with the 'Tropical Tranquility' palm. A statement piece for relaxation and aesthetic appeal.",
+    "price": 3499,
+    "imageUrl": "assets/images/plant_3.png",
+    "subtitle": "Relaxing Ambiance"
+  },
+  {
+    "name": "Urban Jungle Ficus",
+    "description": "Transform your living space into an urban oasis with the resilient and beautiful 'Urban Jungle' ficus.",
+    "price": 4199,
+    "imageUrl": "assets/images/plant_4.png",
+    "subtitle": "Rustic Elegance"
+  },
+  {
+    "name": "Zen Garden Bonsai",
+    "description": "Cultivate mindfulness and patience with our 'Zen Garden' bonsai tree, a symbol of harmony and balance in your space.",
+    "price": 4999,
+    "imageUrl": "assets/images/plant_5.png",
+    "subtitle": "Mindfulness Enhancer"
+  },
+  {
+    "name": "Desert Beauty Succulent",
+    "description": "Adorn your interiors with our 'Desert Beauty' succulent, offering a minimalist yet enchanting vibe with low maintenance.",
+    "price": 1999,
+    "imageUrl": "assets/images/plant_1.png",
+    "subtitle": "Minimal Maintenance"
+  },
+  {
+    "name": "Aqua Serene Lucky Bamboo",
+    "description": "Invite luck and prosperity with our 'Aqua Serene' lucky bamboo, a blend of simple water gardening and positive energy.",
+    "price": 2399,
+    "imageUrl": "assets/images/plant_2.png",
+    "subtitle": "Luck and Prosperity"
+  },
+  {
+    "name": "Sunrise Symphony Orchid",
+    "description": "Illuminate your space with the radiant and sophisticated 'Sunrise Symphony' orchid, a beacon of natural elegance.",
+    "price": 4499,
+    "imageUrl": "assets/images/plant_3.png",
+    "subtitle": "Elegant Beauty"
+  },
+  {
+    "name": "Evergreen Whisper Fern",
+    "description": "Reconnect with nature with the 'Evergreen Whisper' fern, a lush green presence to inspire a refreshing atmosphere.",
+    "price": 2899,
+    "imageUrl": "assets/images/plant_4.png",
+    "subtitle": "Nature's Touch"
+  },
+  {
+    "name": "Moonlight Sonata Cactus",
+    "description": "Enjoy the whimsical allure of our 'Moonlight Sonata' cactus, a nighttime charmer that adds character to your décor.",
+    "price": 3299,
+    "imageUrl": "assets/images/plant_5.png",
+    "subtitle": "Nocturnal Charm"
   }
+
 ]

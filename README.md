@@ -2,6 +2,8 @@
 
 This is an entry into the heyflutter UI Challenge for a Plant Shop App.
 
+A preview of the app is available using the device_preview package here <https://tolland.github.io/ui_challenge/>
+
 Background on the challenge is in this video:
 
 - <https://www.youtube.com/watch?v=aERczKh_uMk>

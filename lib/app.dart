@@ -1,8 +1,9 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:device_preview/device_preview.dart';
+
 import 'package:plants_repository/plants_repository.dart';
 import 'package:ui_challenge_plant_shop/services/app_router.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ui_challenge_plant_shop/services/app_theme.dart';
 
 import 'blocs/bloc_exports.dart';

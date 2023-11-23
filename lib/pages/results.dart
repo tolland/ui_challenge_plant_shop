@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:ui_challenge_plant_shop/blocs/bloc_exports.dart';
@@ -19,13 +18,12 @@ class ResultsPage extends StatefulWidget {
 }
 
 class _ResultsPageState extends State<ResultsPage> {
-  final rnd = Random();
-  int crossAxisCount = 4;
-
   final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    var orientation = MediaQuery.of(context).orientation;
+
     return BlocBuilder<PlantsBloc, PlantsState>(builder: (context, state) {
       List<Plant> plantList = state.allPlants;
       return Container(
@@ -38,7 +36,7 @@ class _ResultsPageState extends State<ResultsPage> {
           ),
         ),
         child: Scaffold(
-          backgroundColor: Color(0xffececee),
+          backgroundColor: Colors.transparent,
           appBar: AppBar(
             title: Text("Search Products"),
             leading: IconButton(
@@ -98,7 +96,7 @@ class _ResultsPageState extends State<ResultsPage> {
                               ),
                             ),
                             child: IconButton(
-                              icon: const Icon(Icons.checklist),
+                              icon: const Icon(Icons.tune),
                               color: Colors.black,
                               onPressed: () {},
                             ),
@@ -109,7 +107,8 @@ class _ResultsPageState extends State<ResultsPage> {
                   ),
                   Expanded(
                     child: MasonryGridView.count(
-                      crossAxisCount: 2,
+                      crossAxisCount:
+                          orientation == Orientation.portrait ? 2 : 3,
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 10,
                       itemCount: plantList.length + 1,
@@ -133,7 +132,6 @@ class _ResultsPageState extends State<ResultsPage> {
               ),
             ),
           ),
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         ),
       );
     });

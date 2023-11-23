@@ -23,7 +23,21 @@ dependencies:
   google_fonts: ^6.1.0
   meta: ^1.9.1
   auto_size_text: ^3.0.0
-    
+  peanut: ^5.0.0
+  flutter_native_splash: ^2.3.4
+#  device_preview: ^1.1.0
+#
+#dependency_overrides:
+  device_preview:
+    git:
+      url: https://github.com/bradrushworth/flutter_device_preview.git
+      path: device_preview
+      ref: master
+#  device_preview: ^1.1.0
+  # device_frame: ^1.1.0
+
+  cupertino_icons: ^1.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -35,3 +49,11 @@ flutter:
   assets:
     - assets/images/
     - assets/data/plants.json
+
+flutter_native_splash:
+    color: "#ffffff"
+    image: assets/images/splash.png
+    android: true
+    ios: true
+    android_gravity: center
+    ios_content_mode: center

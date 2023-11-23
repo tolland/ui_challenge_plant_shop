@@ -6,7 +6,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:plants_repository/plants_repository.dart';
 import 'package:ui_challenge_plant_shop/pages/detail.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
   const ProductCard({
     Key? key,
     required this.index,
@@ -17,6 +17,13 @@ class ProductCard extends StatelessWidget {
   final int index;
   final int width;
   final Plant plant;
+
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+  bool _isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +40,7 @@ class ProductCard extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Image.asset(
-                  plant.imageUrl,
+                  widget.plant.imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -42,7 +49,7 @@ class ProductCard extends StatelessWidget {
                   context,
                   DetailPage.id,
                   arguments: DetailsPageArguments(
-                    index,
+                    widget.index,
                   ),
                 );
               },
@@ -54,7 +61,7 @@ class ProductCard extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: AutoSizeText(
-                  plant.name,
+                  widget.plant.name,
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -67,15 +74,18 @@ class ProductCard extends StatelessWidget {
                   context,
                   DetailPage.id,
                   arguments: DetailsPageArguments(
-                    index,
+                    widget.index,
                   ),
                 );
               },
             ),
+            const SizedBox(
+              height: 4.0,
+            ),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                plant.subtitle,
+                widget.plant.subtitle,
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.normal,
@@ -83,31 +93,37 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 4.0,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   NumberFormat.simpleCurrency(locale: 'en_US')
-                      .format(plant.price / 100),
+                      .format(widget.plant.price / 100),
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
-                Center(
-                  child: Ink(
-                    width: 40,
-                    decoration: const ShapeDecoration(
-                      color: Colors.black,
-                      shape: CircleBorder(
-
-                      ),
+                Ink(
+                  height: 30,
+                  decoration: const ShapeDecoration(
+                    color: Colors.black,
+                    shape: CircleBorder(),
+                  ),
+                  child: IconButton(
+                    icon: Icon(
+                      _isFavorite ? Icons.favorite : Icons.favorite_border,
                     ),
-                    child: IconButton(
-                      icon: const Icon(Icons.favorite),
-                      color: Colors.white,
-                      onPressed: () {},
-                    ),
+                    iconSize: 14,
+                    color: Colors.white,
+                    onPressed: () {
+                      setState(() {
+                        _isFavorite = !_isFavorite;
+                      });
+                    },
                   ),
                 ),
               ],
